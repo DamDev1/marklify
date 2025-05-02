@@ -5,6 +5,13 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { CopyIcon } from "lucide-react";
 
+interface CodeProps {
+  inline: boolean;
+  className: string;
+  children: React.ReactNode;
+  [key: string]: any; // for the ...props rest property
+}
+
 export default function ReadmeGenereate({readmeContent}:{readmeContent:string}) {
   const [copied, setCopied] = useState(false);
   const markdownRef = useRef<HTMLDivElement>(null);
@@ -24,7 +31,7 @@ export default function ReadmeGenereate({readmeContent}:{readmeContent:string}) 
   };
 
   const components = {
-    code({ inline, className, children, ...props }: any) {
+ode({ inline, className, children, ...props }: CodeProps) {
       const match = /language-(\w+)/.exec(className || "");
       return inline ? (
         <code className="bg-gray-200 px-1 rounded text-sm" {...props}>
