@@ -43,23 +43,23 @@ export default function ReadmeGenereate({readmeContent}:{readmeContent:string}) 
         </div>
       );
     },
-    h1: (props: any) => (
+    h1: (props: React.HTMLAttributes<HTMLElement>) => (
       <h1 className="text-3xl font-bold text-gray-800 mb-6" {...props} />
     ),
-    h2: (props: any) => (
+    h2: (props: React.HTMLAttributes<HTMLElement>) => (
       <h2 className="text-2xl font-semibold text-gray-700 mb-4 mt-8" {...props} />
     ),
-    h3: (props: any) => (
+    h3: (props: React.HTMLAttributes<HTMLElement>) => (
       <h3 className="text-xl font-medium text-gray-700 mb-3 mt-6" {...props} />
     ),
-    p: (props: any) => <p className="text-gray-600 mb-4" {...props} />,
-    ul: (props: any) => (
+    p: (props: React.HTMLAttributes<HTMLElement>) => <p className="text-gray-600 mb-4" {...props} />,
+    ul: (props: React.HTMLAttributes<HTMLElement>) => (
       <ul className="list-disc pl-6 space-y-2 text-gray-600 mb-4" {...props} />
     ),
-    ol: (props: any) => (
+    ol: (props: React.HTMLAttributes<HTMLElement>) => (
       <ol className="list-decimal pl-6 space-y-2 text-gray-600 mb-4" {...props} />
     ),
-    a: (props: any) => (
+    a: (props: React.HTMLAttributes<HTMLElement>) => (
       <a
         className="text-blue-600 hover:underline"
         target="_blank"
@@ -67,7 +67,7 @@ export default function ReadmeGenereate({readmeContent}:{readmeContent:string}) 
         {...props}
       />
     ),
-    blockquote: (props: any) => (
+    blockquote: (props: React.HTMLAttributes<HTMLElement>) => (
       <blockquote
         className="border-l-4 border-gray-300 pl-4 italic text-gray-600 mb-4"
         {...props}
@@ -108,7 +108,7 @@ export default function ReadmeGenereate({readmeContent}:{readmeContent:string}) 
               </ReactMarkdown>
             ) : (
               <div className="text-center py-12 text-gray-500">
-                <p>Click "Generate README" to fetch and display the content</p>
+                <p>Click &apos;Generate README&apos; to fetch and display the content</p>
               </div>
             )}
           </div>
