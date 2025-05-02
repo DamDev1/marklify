@@ -61,7 +61,7 @@ const FeatureSection = () => (
           <div className="w-full md:w-1/2 lg:w-1/3 p-8">
             <div className="flex items-center mb-6">
               <CheckCircle width={20} height={20} className="h-6 w-6 text-indigo-500" />
-              <div className="ml-4 text-xl">Manage your readme's</div>
+              <div className="ml-4 text-xl">Manage your readme&#39;s</div>
             </div>
             <p className="leading-loose text-gray-500">
               Nostrud excepteur incididunt proident sit nulla ipsum sunt nostrud est esse adipisicing irure officia

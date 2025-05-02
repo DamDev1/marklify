@@ -1,0 +1,95 @@
+[
+    {
+        "Plan":"Free",
+        "Price":0,
+        "Description":"Our Free plan",
+        "Features":[
+            {
+                "title":"README generation",
+                "value":true
+            },
+            {
+                "title":"Editable templates",
+                "value":false
+            },
+            {
+                "title":"Save history",
+                "value":false
+            },
+            {
+                "title":"Unlimited usage",
+                "value":false
+            },
+            {
+                "title":"Team support",
+                "value":false
+            },
+            {
+                "title":"API access",
+                "value":false
+            }
+        ]
+    },
+    {
+        "Plan":"Pro",
+        "Description":"Our Pro plan",
+        "Price":2500,
+        "Features":[
+            {
+                "title":"README generation",
+                "value":true
+            },
+            {
+                "title":"Editable templates",
+                "value":true
+            },
+            {
+                "title":"Save history",
+                "value":true
+            },
+            {
+                "title":"Unlimited usage",
+                "value":true
+            },
+            {
+                "title":"Team support",
+                "value":false
+            },
+            {
+                "title":"API access",
+                "value":true
+            }
+        ]
+    },
+    {
+        "Plan":"Business",
+        "Description":"Our Business plan",
+        "Price":5000,
+       "Features":[
+            {
+                "title":"README generation",
+                "value":true
+            },
+            {
+                "title":"Editable templates",
+                "value":true
+            },
+            {
+                "title":"Save history",
+                "value":true
+            },
+            {
+                "title":"Unlimited usage",
+                "value":true
+            },
+            {
+                "title":"Team support",
+                "value":true
+            },
+            {
+                "title":"API access",
+                "value":true
+            }
+        ]
+    }
+]

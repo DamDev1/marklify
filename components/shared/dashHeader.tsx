@@ -8,7 +8,7 @@ export default function DashHeader() {
         <div>
           <h1 className="font-bold text-xl">Welcome back, DamDev</h1>
           <p className="text-sm text-muted-foreground">
-            Here's what's happening with your projects
+            Here&apos;s what&apos;s happening with your projects
           </p>
         </div>
         <div className="flex items-center gap-3">

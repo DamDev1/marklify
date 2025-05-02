@@ -12,7 +12,7 @@ export default function RightSide() {
       await navigator.clipboard.writeText(markdown);
       alert("Copied to clipboard!");
     } catch (err) {
-      alert("Failed to copy");
+      console.error("Failed to copy: ", err);
     }
   };
   return (

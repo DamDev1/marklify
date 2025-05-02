@@ -11,7 +11,7 @@ export default function LeftSide() {
           <Input placeholder="https://github.com/damdev" />
         </form>
       </div>
-      <p className="mt-4 text-sm text-muted-foreground">Suggestion's</p>
+      <p className="mt-4 text-sm text-muted-foreground">Suggestion&apos;s</p>
       <div className="divide-y mt-2 divide-gray-200 rounded-xl border border-gray-200 shadow-xs p-5 bg-white">
         <h1 className="text-lg font-bold">Prompt Stash Site</h1>
         <p className="mt-2 text-sm text-muted-foreground">

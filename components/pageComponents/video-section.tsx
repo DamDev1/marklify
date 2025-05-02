@@ -1,4 +1,3 @@
-import Play from "../constants/svg/play.svg";
 
 const PlayButton = () => (
   <button
