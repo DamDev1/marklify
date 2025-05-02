@@ -9,7 +9,6 @@ interface CodeProps {
   inline: boolean;
   className: string;
   children: React.ReactNode;
-  [key: string]: any; // for the ...props rest property
 }
 
 export default function ReadmeGenereate({readmeContent}:{readmeContent:string}) {

@@ -7,7 +7,6 @@ import ListSection from "@/components/pageComponents/list-section";
 import VideoSection from "@/components/pageComponents/video-section";
 import Header from "@/components/shared/Header";
 import React from "react";
-import { toast } from "react-toastify";
 
 export default function page() {
   return (
