@@ -1,3 +1,4 @@
+"use client"
 import Footer from "@/components/pageComponents/footer";
 import FreeTest from "@/components/pageComponents/freeTest";
 import HomePage from "@/components/pageComponents/Hero";
@@ -6,6 +7,7 @@ import ListSection from "@/components/pageComponents/list-section";
 import VideoSection from "@/components/pageComponents/video-section";
 import Header from "@/components/shared/Header";
 import React from "react";
+import { toast } from "react-toastify";
 
 export default function page() {
   return (

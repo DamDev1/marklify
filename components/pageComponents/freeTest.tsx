@@ -1,8 +1,9 @@
 "use client";
 import React, { Fragment, useState } from "react";
 import ReadmeGenereate from "./ReadmeGenereate";
-import axios from "axios";
+import axios, { isAxiosError } from "axios";
 import { Loader2Icon } from "lucide-react";
+import { toast } from "react-toastify";
 
 export default function FreeTest() {
   const [readmeContent, setReadmeContent] = useState<string>("");
@@ -15,9 +16,15 @@ export default function FreeTest() {
         gitUrl,
       });
       setReadmeContent(res.data.readme);
+      toast('Readme generated successfully');
     } catch (error) {
-      console.error(error);
-    } finally {
+      if (isAxiosError(error)) {
+        toast.error(error.response?.data?.details || 'Something went wrong');
+        console.error(error);
+      } else {
+        console.error('Unknown error:', error);
+      }
+    }finally {
       setLoading(false);
     }
   };

@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
         const urlParts = gitUrl.split('/');
         const owner = urlParts[urlParts.length - 2];
         const repo = urlParts[urlParts.length - 1];
-        
+
         // Fetch repo details from GitHub API
         const repoDetails = await fetch(`https://api.github.com/repos/${owner}/${repo}`).then(res => {
             if (!res.ok) throw new Error("Failed to fetch repo details");
@@ -53,7 +53,7 @@ Formatting Requirements:
         // - "gemini-pro"
         // - "gemini-1.0-pro"
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest" });
-        
+
         // Generate content
         const result = await model.generateContent(prompt);
         const response = await result.response;
@@ -61,16 +61,23 @@ Formatting Requirements:
 
         const cleanedText = text.replace(/^```[a-z]*\n?/i, '').replace(/```$/, '').trim();
         return NextResponse.json({ readme: cleanedText });
-    } catch (error: any) {
+    } catch (error: unknown) {
         console.error("Error generating README:", error);
+
+        let message = "An unknown error occurred";
+
+        if (error instanceof Error) {
+            message = error.message;
+        }
+
         return NextResponse.json(
-            { 
+            {
                 error: "Failed to generate README",
-                details: error.message,
-                // Include available models in the error response for debugging
+                details: message,
                 suggestion: "Try using model names: 'gemini-1.5-pro-latest', 'gemini-pro', or 'gemini-1.0-pro'"
             },
             { status: 500 }
         );
     }
+
 }

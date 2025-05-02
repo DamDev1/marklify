@@ -77,6 +77,7 @@ export default function ReadmeGenereate({readmeContent}:{readmeContent:string}) 
 
   return (
     <div className=" bg-gradient-to-b">
+      
       <div className="max-w-4xl mx-auto">
 
         {/* README Container */}
